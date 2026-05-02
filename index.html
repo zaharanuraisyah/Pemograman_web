@@ -84,20 +84,24 @@
     </div>
 
     <!-- FORM PRAKTIKUM -->
-    <section class="form-card">
+<section class="form-card">
     <h2>Form Pengisian Data Diri</h2>
-    <form action="success.html" method="GET">
+    <!-- Tambahkan id="praktikumForm" dan hapus atribut action agar dikontrol JS -->
+    <form id="praktikumForm">
         <div class="input-group">
             <label>Nama Lengkap</label>
-            <input type="text" name="nama" required placeholder="Masukkan nama...">
+            <!-- Tambahkan id="nama" -->
+            <input type="text" id="nama" name="nama" required placeholder="Masukkan nama...">
         </div>
         <div class="input-group">
             <label>NIM</label>
-            <input type="text" name="nim" maxlength="9" required placeholder="Contoh: 202432058">
+            <!-- Tambahkan id="nim" -->
+            <input type="text" id="nim" name="nim" maxlength="9" required placeholder="Contoh: 202432058">
         </div>
         <div class="input-group">
             <label>Tanggal Praktikum</label>
-            <input type="date" name="tanggal" required>
+            <!-- Tambahkan id="tanggal" -->
+            <input type="date" id="tanggal" name="tanggal" required>
         </div>
         <button type="submit" class="btn-primary">Kirim</button>
     </form>

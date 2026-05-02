@@ -1,16 +1,23 @@
-// Mengambil elemen form dari index.html
+//Mengambil elemen form berdasarkan ID
 const praktikumForm = document.getElementById('praktikumForm');
 
-// Menambahkan event listener saat form dikirim (submit)
-praktikumForm.addEventListener('submit', function(event) {
-    // 1. Tampilkan pesan konfirmasi sesuai instruksi
-    alert("Data Telah Berhasil di Kirim");
+if (praktikumForm) {
+    praktikumForm.addEventListener('submit', function(event) {
+        // Mencegah form langsung pindah halaman
+        event.preventDefault(); 
 
-    // 2. Browser secara otomatis akan mengarah ke 'success.html' 
-    // karena kita sudah mengatur atribut 'action' di HTML.
+        // Menampilkan alert sukses
+        alert("Data Telah Berhasil di Kirim");
 
-    // 3. Opsional: Alert konfirmasi sebelum pindah ke success.html
-    document.querySelector('form').addEventListener('submit', function() {
-    alert("Data Telah Berhasil di Kirim! Klik OK untuk melihat detail.");
-});
-});
+        // Mengambil nilai dari input berdasarkan ID
+        const namaValue = document.getElementById('nama').value;
+        const nimValue = document.getElementById('nim').value;
+        const tanggalValue = document.getElementById('tanggal').value;
+
+        // Pindah ke halaman success.html sambil membawa data di URL
+        const targetURL = `success.html?nama=${encodeURIComponent(namaValue)}&nim=${encodeURIComponent(nimValue)}&tanggal=${encodeURIComponent(tanggalValue)}`;
+        
+        window.location.href = targetURL;
+    });
+}
+
