@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Praktikum Pemrograman Web - Zahara Nur Aisyah</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Mengambil font estetik Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Laporan Praktikum Pemrograman Web B</h1>
+        <p class="subtitle">Zahara Nur Aisyah | NIM: 202432058</p>
+    </header>
+
+    <div class="teori-container">
+        <!-- 1. PERTANYAAN SEPUTAR TAG -->
+        <details>
+            <summary>1. Pertanyaan seputar tag</summary>
+            <div class="content">
+                <p><strong>A. Apa yang dimaksud dengan tag pada html?</strong> Tag merupakan komponen dasar HTML yang berfungsi sebagai instruksi atau penanda bagi browser tentang bagaimana suatu elemen harus ditampilkan. Setiap tag ditulis di dalam kurung sudut, seperti &lt;tagname&gt;.</p>
+                <p><strong>B. Apa itu pembuka dan penutup tag? Apakah hal tersebut terdapat pada semua jenis tag?</strong></p>
+                <ul>
+                    <li><strong>Tag Pembuka:</strong> Menandai titik awal instruksi atau konten (contoh: &lt;html&gt;).</li>
+                    <li><strong>Tag Penutup:</strong> Menandai akhir dari instruksi tersebut dengan tambahan garis miring (contoh: &lt;/html&gt;).</li>
+                    <li><strong>Ketersediaan:</strong> Tidak terdapat pada semua jenis tag. Terdapat self-closing tags atau void elements seperti &lt;img&gt; atau &lt;br&gt; yang tidak memerlukan pasangan penutup.</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- 2. PERTANYAAN SEPUTAR ELEMENT -->
+        <details>
+            <summary>2. Pertanyaan seputar element</summary>
+            <div class="content">
+                <p><strong>A. Apa yang dimaksud dengan element?</strong> Element adalah satu kesatuan utuh yang mencakup tag pembuka, tag penutup, serta semua isi atau konten yang berada di antaranya.</p>
+                <p><strong>B. Apa yang dimaksud dengan tagname, attribute dan content pada element?</strong></p>
+                <ul>
+                    <li><strong>Tagname:</strong> Nama identitas dari elemen tersebut (misal: h1, p, atau a).</li>
+                    <li><strong>Attribute:</strong> Informasi atau parameter tambahan yang diletakkan di dalam tag pembuka untuk memodifikasi perilaku elemen (misal: href pada link atau src pada gambar).</li>
+                    <li><strong>Content:</strong> Isi berupa teks atau elemen lain yang dibungkus oleh tag pembuka dan penutup.</li>
+                </ul>
+                <p><strong>C. Apakah element dapat ditumpuk? Apa yang terjadi bila demikian?</strong> Ya, element dapat ditumpuk atau disebut dengan istilah nesting. Jika dilakukan, elemen tersebut akan membentuk hubungan hierarki (induk dan anak), di mana elemen yang di dalam akan terikat oleh sifat atau gaya yang diberikan pada elemen pembungkusnya.</p>
+            </div>
+        </details>
+
+        <!-- 3. PERTANYAAN SEPUTAR ANCHOR -->
+        <details>
+            <summary>3. Pertanyaan seputar anchor</summary>
+            <div class="content">
+                <p><strong>A. Apa yang dimaksud dengan anchor?</strong> Anchor adalah elemen HTML yang ditandai dengan tag &lt;a&gt;, digunakan untuk menciptakan tautan atau hyperlink menuju dokumen lain, file, atau bagian tertentu dalam halaman web.</p>
+                <p><strong>B. Bagaimana caranya anchor dapat berfungsi, baik dari sisi pendefinisian ataupun pengaplikasiannya?</strong></p>
+                <ul>
+                    <li><strong>Pendefinisian:</strong> Harus menyertakan atribut href yang berisi alamat tujuan (URL) agar anchor memiliki tujuan klik.</li>
+                    <li><strong>Pengaplikasian:</strong> Browser akan merender konten di dalam tag tersebut sebagai teks yang dapat diklik, yang secara otomatis memindahkan pengguna ke alamat yang telah ditentukan di atribut href.</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- 4. PERTANYAAN SEPUTAR MULTIMEDIA -->
+        <details>
+            <summary>4. Pertanyaan seputar multimedia</summary>
+            <div class="content">
+                <p><strong>A. Text</strong></p>
+                <ul>
+                    <li>Tag manipulasi konten teks: &lt;b&gt; atau &lt;strong&gt; (menebalkan teks), &lt;i&gt; atau &lt;em&gt; (memiringkan teks), serta &lt;u&gt; (menggarisbawahi teks).</li>
+                    <li>Tag manipulasi struktur teks: &lt;h1&gt; sampai &lt;h6&gt; (menentukan hierarki judul/heading), serta &lt;p&gt; (membuat paragraf baru).</li>
+                </ul>
+                <p><strong>B. Image</strong></p>
+                <ul>
+                    <li><strong>Penyebab gambar tidak tampil:</strong> Jalur file (path) yang salah, URL gambar tidak valid, atau file gambar tersebut telah dihapus/rusak.</li>
+                    <li><strong>Teks pengganti:</strong> Fenomena ini terjadi karena penggunaan atribut alt (alternative text). Teks ini muncul untuk menjelaskan isi gambar jika gambar gagal dimuat atau dibaca oleh screen reader.</li>
+                </ul>
+                <p><strong>C. Audio</strong><br>Audio Source Non-Lokal: Caranya adalah dengan memasukkan URL web langsung yang mengarah ke file audio (misal: link .mp3 dari server lain) ke dalam atribut src pada tag &lt;audio&gt; atau tag &lt;source&gt;.</p>
+                <p><strong>D. Video</strong></p>
+                <ul>
+                    <li><strong>Masalah Autoplay:</strong> Biasanya autoplay tidak berjalan karena kebijakan browser modern yang memblokir media bersuara untuk diputar otomatis demi kenyamanan pengguna.</li>
+                    <li><strong>Solusi:</strong> Agar atribut tersebut berfungsi, kita harus menambahkan atribut muted (suara dimatikan) bersamaan dengan atribut autoplay.</li>
+                </ul>
+            </div>
+        </details>
+    </div>
+
+    <!-- FORM PRAKTIKUM -->
+    <section class="form-card">
+    <h2>Form Pengisian Data Diri</h2>
+    <form action="success.html" method="GET">
+        <div class="input-group">
+            <label>Nama Lengkap</label>
+            <input type="text" name="nama" required placeholder="Masukkan nama...">
+        </div>
+        <div class="input-group">
+            <label>NIM</label>
+            <input type="text" name="nim" maxlength="9" required placeholder="Contoh: 202432058">
+        </div>
+        <div class="input-group">
+            <label>Tanggal Praktikum</label>
+            <input type="date" name="tanggal" required>
+        </div>
+        <button type="submit" class="btn-primary">Kirim</button>
+    </form>
+</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

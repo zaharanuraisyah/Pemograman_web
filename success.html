@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berhasil Terkirim - Zahara Nur Aisyah</title>
+    <!-- Cukup panggil file CSS yang sama -->
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container result-card">
+    <header>
+        <h1>Data Telah Berhasil di Kirim</h1>
+        <p class="subtitle">Detail Laporan Praktikum</p>
+    </header>
+    
+    <div class="data-display">
+        <p><strong>Nama Lengkap :</strong> <span id="resNama"></span></p>
+        <p><strong>NIM           :</strong> <span id="resNim"></span></p>
+        <p><strong>Tanggal       :</strong> <span id="resTanggal"></span></p>
+    </div>
+
+    <div class="gif-container">
+        <!-- Memanggil file lokal kamu -->
+        <img src="vidio gifs.gif" alt="Success Celebration">
+    </div>
+
+    <button class="btn-primary" onclick="window.location.href='index.html'">
+        Kembali ke Halaman Utama
+    </button>
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById('resNama').textContent = urlParams.get('nama') || '-';
+    document.getElementById('resNim').textContent = urlParams.get('nim') || '-';
+    document.getElementById('resTanggal').textContent = urlParams.get('tanggal') || '-';
+</script>
+
+</body>
+</html>
